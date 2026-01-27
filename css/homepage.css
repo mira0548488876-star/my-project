@@ -1,0 +1,103 @@
+.accecability {
+    position: fixed;      /* צף מעל הדף */
+    bottom: 50%;         /* מרחק מלמטה */
+    left: 20px;          /* מרחק מימין */
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    border-radius: 999px;
+    z-index: 1000;        /* מעל header/footer */
+}
+/* אזור התמונןת המרכזי */
+.main_visual {
+    position: relative;
+    height: calc(100vh - 80px); /* פחות ההדר */
+}
+/* תמונות */
+.main_visual-img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    animation: slow-fade 20s infinite; /* אנימציה של fade */
+}
+
+/* תזמון לכל תמונה */
+.main_visual-img:nth-of-type(1) { animation-delay: 0s; }
+.main_visual-img:nth-of-type(2) { animation-delay: 3s; }
+.main_visual-img:nth-of-type(3) { animation-delay: 7s; }
+.main_visual-img:nth-of-type(4) { animation-delay: 9s; }
+.main_visual-img:nth-of-type(5) { animation-delay: 12s; }
+.main_visual-img:last-child { animation-delay: 15s; }
+
+/* אנימציית fade */
+@keyframes slow-fade {
+    0%   { opacity: 0; }
+    15%  { opacity: 1; }   /* fade in */
+    50%  { opacity: 1; }   /* נשאר גלוי */
+    65%  { opacity: 0; }   /* fade out */
+    100% { opacity: 0; }
+}
+
+/* טקסט מעל התמונות */
+.main_visual-content {
+    position: relative;
+    z-index: 2; /* כדי שהטקסט יהיה מעל התמונה */
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+    text-align: center;
+    background: rgba(0,0,0,0.35);
+    padding: 40px;
+    gap: 20px;
+    animation: text-fade-up 1.2s ease forwards; /* אנימציה ראשונית */
+}
+
+.main_visual-content p {
+    max-width: 700px;
+    font-size: 2rem;
+    line-height: 1.8;
+    font-style: italic;
+    color: #eaeaea;
+    text-shadow: 0 2px 8px rgba(0,0,0,0.5);
+    animation: text-in 1s;
+}
+.main_visual-content h1 {
+    font-size: clamp(2.2rem, 5vw, 3.5rem);
+    font-weight: 700;
+    letter-spacing: 1px;
+    margin: 0;
+    text-shadow: 0 4px 15px rgba(0,0,0,0.6);
+    animation: title-in 2s;
+}
+/* אנימציות טקסט */
+@keyframes text-in {
+    from { opacity: 0; transform: translateX(-40px); }
+    to   { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes title-in {
+    from { opacity: 0; transform: translateX(40px); }
+    to   { opacity: 1; transform: translateX(0); }
+}
+
+@media (max-width: 700px) {
+.main_visual-content p{
+    font-size: 1rem;
+}
+    .logo img {
+        height: 70px; /* הקטנת הלוגו */
+    }
+  /* הקטנת התמונות שמתחלפות */
+  /* ניסתי את כל האפשרויות והן לא קטנו */
+    .main_visual{
+        height: 100vh; 
+        width: auto;
+        object-fit:cover; 
+    }
+    
+}

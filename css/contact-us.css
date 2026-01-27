@@ -1,0 +1,149 @@
+
+/* אזור ראשי */
+.contact-container {
+    height: calc(100vh - 80px); /* מסך מלא בלי ההדר */
+    display: flex;
+    flex-direction: row-reverse; /*  טופס משמאל */
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    padding: 40px;
+    box-sizing: border-box;
+}
+
+/* כל צד תופס חצי מסך */
+.contact-right,
+.contact-left {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* צד ימין – טקסט + תמונה */
+.contact-right {
+   
+    text-align: center;
+    gap: 20px;
+}
+
+.contact-container h1 {
+     color:#3399ff;
+    font-size: 4rem;
+    margin: 0;
+    /* צל שנותן תחושה של מסגרת לאותיות */
+    text-shadow:
+        -1px -1px 0 #000,
+         1px -1px 0 #000,
+        -1px  1px 0 #000,
+         1px  1px 0 #000;
+}
+
+.contact-container p {
+    font-size: larger;
+    color: black;
+}
+
+/* תמונה */
+.contact-image img {
+    width: 260px;
+    max-width: 100%;
+    height: auto;
+    opacity: 0.9;
+}
+
+/*  צד שמאל – טופס  */
+.contact-left {
+    justify-content: center;
+}
+
+/* קופסת הטופס */
+.contact-form {
+    background-color: #3399ff;
+    color: #03707a;
+    padding: 30px;
+    border-radius: 16px;
+    width: 100%;
+    max-width: 380px;
+    box-shadow: 0 10px 30px rgba(10, 30, 33, 0.5);
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/* תוויות */
+.contact-form label {
+    display: flex;
+    flex-direction: column;
+    text-align: right;
+    font-size: 0.9rem;
+    gap: 5px;
+}
+
+/* שדות קלט */
+.contact-form input,
+.contact-form textarea {
+    padding: 10px;
+    border-radius: 8px;
+    border: none;
+    font-size: 1rem;
+    background-color: white;
+    color: rgb(7, 4, 4);
+}
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+    color: #aaaaaa;
+}
+/* לשדות בעברית */
+#massage,
+#fullname {
+    direction: rtl;
+}
+#email,#tel{
+    direction: ltr;
+}
+
+/* כפתור */
+.contact-form button {
+    margin-top: 10px;
+    padding: 12px;
+    background-color: rgb(16, 15, 15);
+    border: none;
+    border-radius: 10px;
+    color: #f3f7fa;
+    font-size: 1.1rem;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.contact-form button:hover {
+    background-color: rgb(87, 240, 250);
+    color: #000;
+    transform: translateY(3px);
+    border: 1px solid #000;
+}
+
+@media (max-width: 700px) {
+    
+    .contact-container {
+       padding: 0 5vw; 
+        flex-direction:column-reverse; /* סידור טופס ותמונה למעלה/מטה */
+        gap: 20px; /* רווח קטן יותר בין הפריטים */
+        padding: 0 3vw;
+        height: auto; /* לא מחייב גובה מלא */ 
+    }
+    .contact-right,
+     .contact-left {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    margin: 10vh;}
+
+    .contact-form {
+        box-shadow: none;
+    }
+   
+}
+
+    

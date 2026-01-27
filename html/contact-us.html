@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+   
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>צור קשר | MyCar</title>
+
+   
+    <link rel="stylesheet" href="../css/contact-us.css">
+    <link rel="stylesheet" href="../css/header-footer.css" />
+
+
+    <link rel="icon" href="../images/icons/contact-mail.png">
+</head>
+<body>
+
+    <!-- הדר  -->
+    <header>
+        <!-- לוגו -->
+        <div class="logo">
+            <img src="../images/logo.png" alt="לוגו MyCar">
+        </div>
+        <!-- ניווט -->
+        <nav class="nav">
+            <a href="../homepage.html">דף הבית</a>
+            <a href="../html/famil's-cars.html">רכבים משפחתיים</a>
+            <a href="../html/fancy-cars.html">רכבים אקסלוסיביים</a>
+            <a href="../html/electric-cars.html">רכבים חשמליים SUV</a>
+            <a href="../html/contact-us.html" class="active">צור קשר</a>
+        </nav>
+    </header>
+
+    <!--  תוכן ראשי  -->
+    <main class="contact-container">
+
+        <!-- צד ימין: טופס  -->
+        <section class="contact-right">
+          
+            <form class="contact-form" action="../html/thank-you.html" method="post">
+
+                <label for="fullname">
+                    שם מלא
+                    <input
+                        type="text"
+                        id="fullname"
+                        name="fullname"
+                        placeholder="הכנס/י שם מלא"
+                        required
+                    >
+                </label>
+
+                <label for="email">
+                    אימייל
+                    <input
+                        type="email"
+                        id="email"
+                        name="email"
+                        placeholder="example@email.com"
+                        required
+                    >
+                </label>
+
+                <label for="tel">
+                    טלפון
+                    <input
+                        type="tel"
+                        id="tel"
+                        name="tel"
+                        placeholder="050-0000000"
+                        required
+                        maxlength="10"
+                        minlength="10"
+                    >
+                </label>
+
+                <label for="massage">
+                    הודעה
+                    <textarea
+                        id="massage"
+                        name="message"
+                        rows="4"
+                        placeholder="כתוב/י כאן את ההודעה שלך"
+                        maxlength="100"
+                    ></textarea>
+                </label>
+
+                <button type="submit">שליחת הודעה</button>
+            </form>
+        </section>
+
+        <!-- צד שמאל: טקסט + תמונה -->
+        <section class="contact-left">
+            <h1>צרו איתנו קשר</h1>
+
+            <div class="contact-image">
+                <img src="../images/icons/contact-mail.gif" alt="אייקון צור קשר">
+            </div>
+
+            <p>נשמח לעמוד לשירותכם בכל שאלה או בקשה</p>
+        </section>
+
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <!-- קטגוריה 1 -->
+            <div class="footer-column">
+                <h4>דגמים</h4>  <!--כותרת  של כל קטגוריה -->
+                <ul class="ul-footer"><!--רשימה לא ממוספרת -->
+                    <li><a href="demo-page.html">כל הדגמים</a></li>
+                    <li><a href="demo-page.html">רכבים חשמלייםSUV</a></li><!--כל פריט ברישמה --> 
+                    <li><a href="demo-page.html">רכבים משפחתיים</a></li>
+                    <li><a href="demo-page.html">רכבים אקסלוסיבים</a></li>
+                </ul>
+            </div>
+
+            <!-- קטגוריה 2 -->
+            <div class="footer-column">
+                <h4>שירות</h4>
+                <ul class="ul-footer">
+                    <li><a href="demo-page.html">שירות לקוחות</a></li>
+                    <li><a href="demo-page.html">מחירון חלפים</a></li>
+                    <li><a href="demo-page.html"></a></li>
+                </ul>
+            </div>
+
+            <!-- קטגוריה 3 -->
+            <div class="footer-column">
+                <h4>אודות</h4>
+                <ul class="ul-footer">
+                    <li><a href="demo-page.html">אודות החברה</a></li>
+                    <li><a href="demo-page.html">דרושים</a></li>
+                    <li><a href="demo-page.html">פניות הציבור</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
